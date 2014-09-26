@@ -196,7 +196,7 @@ self.selectKey("LEFT")
 self.selectKey("RIGHT")
 			</code>
 		</step>
-		<step id="softcam" nextstep="cache">
+		<step id="softcam" nextstep="cardserver">
 			<condition>
 self.condition = config.misc.installwizard.hasnetwork.value and config.misc.installwizard.ipkgloaded.value
 			</condition>
@@ -208,6 +208,19 @@ self.selectKey("LEFT")
 self.selectKey("RIGHT")
 			</code>
 		</step>
+		<step id="cardserver" nextstep="cache">
+			<condition>
+self.condition = config.misc.installwizard.hasnetwork.value and config.misc.installwizard.ipkgloaded.value
+			</condition>
+			<text value="Would you like to install a cardserver?" />
+			<config screen="InstallWizard" module="InstallWizard" args="7" type="ConfigList" />
+			<code>
+self.clearSelectedKeys()
+self.selectKey("LEFT")
+self.selectKey("RIGHT")
+			</code>
+		</step>
+
 		<step id="cache">
 			<condition>
 self.condition = config.misc.installwizard.hasnetwork.value and config.misc.installwizard.ipkgloaded.value
