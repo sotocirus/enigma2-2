@@ -22,6 +22,7 @@ class InstallWizard(Screen, ConfigListScreen):
 	STATE_CHOISE_TDT = 4
 	STATE_CHOISE_EPG = 5
 	STATE_CHOISE_CACHE = 6
+	STATE_CHOISE_CARDSERVER = 7
 	
 	def __init__(self, session, args = None):
 		Screen.__init__(self, session)
@@ -74,14 +75,20 @@ class InstallWizard(Screen, ConfigListScreen):
 
 		elif self.index == self.STATE_CHOISE_SOFTCAM:
 			self.enabled = ConfigYesNo(default = True)
-			modes = {"cccam": "CCcam", "oscam": "Oscam"}
-			self.softcam_type = ConfigSelection(choices = modes, default = "cccam")
+			modes = {"cccam230": "CCcam 2.3.0", "cccam221": "CCcam 2.2.1", "cccam209": "CCcam 2.0.9"}
+			self.softcam_type = ConfigSelection(choices = modes, default = "cccam230")
+			self.createMenu()
+
+		elif self.index == self.STATE_CHOISE_CARDSERVER:
+			self.enabled = ConfigYesNo(default = True)
+			modes = {"oscam9868": "OScam 9868"}
+			self.cardserver_type = ConfigSelection(choices = modes, default = "oscam9868")
 			self.createMenu()
 			
 		elif self.index == self.STATE_CHOISE_CACHE:
 			self.enabled = ConfigYesNo(default = True)
-			modes = {"multics": "MultiCS"}
-			self.cache_type = ConfigSelection(choices = modes, default = "multics")
+			modes = {"multics74": "MultiCS r74"}
+			self.cache_type = ConfigSelection(choices = modes, default = "multics74")
 			self.createMenu()
 
 	def checkNetworkCB(self, data):
@@ -133,6 +140,11 @@ class InstallWizard(Screen, ConfigListScreen):
 			if self.enabled.value:
 				self.list.append(getConfigListEntry(_("Softcam type"), self.softcam_type))
 
+		elif self.index == self.STATE_CHOISE_CARDSERVER:
+			self.list.append(getConfigListEntry(_("Install cardserver"), self.enabled))
+			if self.enabled.value:
+				self.list.append(getConfigListEntry(_("Cardserver type"), self.cardserver_type))
+
 		elif self.index == self.STATE_CHOISE_CACHE:
 			self.list.append(getConfigListEntry(_("Install cache server"), self.enabled))
 			if self.enabled.value:
@@ -170,10 +182,13 @@ class InstallWizard(Screen, ConfigListScreen):
 			self.session.open(InstallWizardIpkgUpdater, self.index, _('Please wait (downloading epg manager)'), IpkgComponent.CMD_INSTALL, {'package': 'enigma2-plugin-extensions-' + self.epg_type.value})
 			
 		elif self.index == self.STATE_CHOISE_SOFTCAM and self.enabled.value:
-			self.session.open(InstallWizardIpkgUpdater, self.index, _('Please wait (downloading softcam)'), IpkgComponent.CMD_INSTALL, {'package': 'enigma2-plugin-softcams-sfteam-' + self.softcam_type.value})
+			self.session.open(InstallWizardIpkgUpdater, self.index, _('Please wait (downloading softcam)'), IpkgComponent.CMD_INSTALL, {'package': 'enigma2-plugin-softcams-' + self.softcam_type.value})
+
+		elif self.index == self.STATE_CHOISE_CARDSERVER and self.enabled.value:
+			self.session.open(InstallWizardIpkgUpdater, self.index, _('Please wait (downloading cardserver)'), IpkgComponent.CMD_INSTALL, {'package': 'enigma2-plugin-cardserver-' + self.cardserver_type.value})
 
 		elif self.index == self.STATE_CHOISE_CACHE and self.enabled.value:
-			self.session.open(InstallWizardIpkgUpdater, self.index, _('Please wait (downloading cache server)'), IpkgComponent.CMD_INSTALL, {'package': 'enigma2-plugin-cache-sfteam-' + self.cache_type.value})
+			self.session.open(InstallWizardIpkgUpdater, self.index, _('Please wait (downloading cache server)'), IpkgComponent.CMD_INSTALL, {'package': 'enigma2-plugin-cache-' + self.cache_type.value})
 		return
 
 class InstallWizardIpkgUpdater(Screen):
