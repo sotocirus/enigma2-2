@@ -4825,12 +4825,13 @@ msgstr ""
 #
 ##ADDONS-sfteam
 
-msgid "Thank you for using the wizard.Your receiver is now ready for use.\n"
-"\n"
-"Please press OK to continue."
-msgstr "Gracias por utilizar el receptor Gigablue.Ya está listo para su uso.\n"
-"\n"
-"Pulse OK para utilizar su receptor.Gracias por confiar en el grupo SFTEAM"
+msgid ""
+"Thank you for using the wizard. Your %s %s is now ready to use.\n"
+"Please press OK to start using your %s %s."
+msgstr ""
+"Gracias por usar el asistente. Tu %s %s ya está lista.\n"
+"Pulsa 'OK' para empezar a usar tu %s %s.Gracias por confiar en el grupo SFTEAM"
+
 #, sfteam
 msgid "Install epg manager"
 msgstr "Escoje tipo de EPG"
@@ -6963,17 +6964,15 @@ msgid "Thai"
 msgstr ""
 
 #
-msgid "Thank you for using the wizard.\n"
+msgid ""
+"Thank you for using the wizard.\n"
 "Please press OK to continue."
-msgstr "Gracias por usar el asistente.\n"
-"Pulse OK para continuar."
+msgstr ""
+"Gracias por usar el asistente.\n"
+"Pulsa OK para continuar."
 
 #
-#, fuzzy
-msgid "Thank you for using the wizard. Your receiver is now ready for use.\n"
-"Press OK to start using your receiver."
-msgstr "Gracias por usar el asistente.\n"
-"Pulse OK para continuar."
+
 
 msgid "The DVD standard doesn't support H.264 (HDTV) video streams. Do you want to create a special format data DVD (which will not play in stand-alone DVD players) instead?"
 msgstr ""
@@ -6984,10 +6983,7 @@ msgstr "El código PIN ha sido cambiado correctamente."
 msgid "The PIN codes you entered are different."
 msgstr "El código PIN que ha introducido es diferente."
 
-msgid "The USB stick was prepared to be bootable.\n"
-"Now you can download an NFI image file!"
-msgstr "El pen USB fue preparado para ser arrancable.\n"
-"¡Ahora puede descargar un fichero de imagen NFI!"
+
 
 #
 msgid "The backup failed. Please choose a different backup location."
