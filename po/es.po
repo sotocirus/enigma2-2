@@ -6963,20 +6963,16 @@ msgid "Thai"
 msgstr ""
 
 #
-msgid ""
-"Thank you for using the wizard.\n"
+msgid "Thank you for using the wizard.\n"
 "Please press OK to continue."
-msgstr ""
-"Gracias por usar el asistente.\n"
+msgstr "Gracias por usar el asistente.\n"
 "Pulse OK para continuar."
 
 #
 #, fuzzy
-msgid ""
-"Thank you for using the wizard. Your receiver is now ready for use.\n"
+msgid "Thank you for using the wizard. Your receiver is now ready for use.\n"
 "Press OK to start using your receiver."
-msgstr ""
-"Gracias por usar el asistente.\n"
+msgstr "Gracias por usar el asistente.\n"
 "Pulse OK para continuar."
 
 msgid "The DVD standard doesn't support H.264 (HDTV) video streams. Do you want to create a special format data DVD (which will not play in stand-alone DVD players) instead?"
@@ -6988,11 +6984,9 @@ msgstr "El código PIN ha sido cambiado correctamente."
 msgid "The PIN codes you entered are different."
 msgstr "El código PIN que ha introducido es diferente."
 
-msgid ""
-"The USB stick was prepared to be bootable.\n"
+msgid "The USB stick was prepared to be bootable.\n"
 "Now you can download an NFI image file!"
-msgstr ""
-"El pen USB fue preparado para ser arrancable.\n"
+msgstr "El pen USB fue preparado para ser arrancable.\n"
 "¡Ahora puede descargar un fichero de imagen NFI!"
 
 #
