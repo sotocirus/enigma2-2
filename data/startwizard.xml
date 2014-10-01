@@ -1,6 +1,6 @@
 <wizard>
 		<step id="start" nextstep="introduction">
-			<text value="Bienvenido SFTEAM.\n\Este asistente de inicio le guiará a través de la configuración básica de su receptor.\nPresione el botón OK del mando a distancia para ir al siguiente paso." />
+			<text value="Bienvenido SFTEAM.\n Este asistente de inicio le guiará a través de la configuración básica de su receptor.\nPresione el botón OK del mando a distancia para ir al siguiente paso." />
 			<code>
 self.clearSelectedKeys()
 self.selectKey("OK")
