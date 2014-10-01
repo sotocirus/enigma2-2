@@ -1,6 +1,6 @@
 <wizard>
 	<step id="inputselection" nextstep="modeselection" timeout="20" timeoutaction="selectnext">
-		<text value="Selecione el modo de video\n\nPresione OK en el tipo de su TV (selecione los tipos de opciones).\n\La siguiente selección de entrada, se reniciara de forma automática en 20 segundos." />
+		<text value="Selecione el modo de video\n\nPresione OK en el tipo de su TV (selecione los tipos de opciones).\nLa siguiente selección de entrada, se reniciara de forma automática en 20 segundos." />
 		<displaytext value="Select video input with up/down buttons" />
 		<list type="dynamic" source="listInputChannels" evaluation="inputSelectionMade" onselect="inputSelectionMoved" />
 		<code>
