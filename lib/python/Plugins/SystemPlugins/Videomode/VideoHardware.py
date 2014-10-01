@@ -149,7 +149,7 @@ class VideoHardware:
 
 		if self.modes_preferred != self.last_modes_preferred:
 			self.last_modes_preferred = self.modes_preferred
-			print "hotplug on dvi"
+			print "hotplug on hdmi"
 			self.on_hotplug("hdmi") # must be hdmi
 
 	# check if a high-level mode with a given rate is available.
