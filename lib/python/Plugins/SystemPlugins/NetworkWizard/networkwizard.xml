@@ -1,6 +1,6 @@
 <wizard>
         <step id="welcome">
-                <text value="Welcome.\n\nIf you want to connect your receiver to the Internet, this wizard will guide you through the basic network setup of your receiver.\n\nPress OK to start configuring your network" />
+                <text value="Bienvenido SFTEAM.\n\nIf Desea conectar su receptor a Internet, este asistente le guiará a través de la configuración de la red básica de su receptor. \ n \ nPresione OK para iniciar la configuración de su red" />
                 <displaytext value="Network wizard" />
 	        <code>
 self.clearSelectedKeys()
@@ -208,7 +208,7 @@ self.selectKey("DOWN")
         </step>
 
         <step id="end">
-                <text value="Thank you for using the wizard.\nPlease press OK to continue." />
+                <text value="Gracias por usar el asistente.\nPresione ok para terminar saludos SFTEAM." />
                 <code>
 self.clearSelectedKeys()
 self.selectKey("OK")
