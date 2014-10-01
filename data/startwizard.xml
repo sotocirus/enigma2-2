@@ -234,7 +234,7 @@ self.selectKey("RIGHT")
 			</code>
 		</step>
 		<step id="end" laststep="true">
-			<text value="Gracias por usar el asistente.\nPresione ok para terminar y usar su GBBLUE.\nSaludos SFTEAM.." />
+			<text value="Gracias por usar el asistente.\nPresione ok para terminar y usar su GIGABLUE.\nGracias en confiar SFTEAM.." />
 			<code>
 self.clearSelectedKeys()
 self.selectKey("OK")
