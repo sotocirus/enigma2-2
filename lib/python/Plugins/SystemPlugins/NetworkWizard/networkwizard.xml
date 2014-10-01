@@ -1,6 +1,6 @@
 <wizard>
         <step id="welcome">
-                <text value="Bienvenido SFTEAM.\n\nIf Desea conectar su receptor a Internet, este asistente le guiará a través de la configuración de la red básica de su receptor. \ n \ nPresione OK para iniciar la configuración de su red" />
+                <text value="Bienvenido SFTEAM.\n\n Desea conectar su receptor a Internet, este asistente le guiará a través de la configuración de la red básica de su receptor. \ n \ nPresione OK para iniciar la configuración de su red" />
                 <displaytext value="Network wizard" />
 	        <code>
 self.clearSelectedKeys()
