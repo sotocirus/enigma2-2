@@ -60,8 +60,8 @@ class VideoHardware:
 
 	modes["Scart"] = ["PAL", "NTSC", "Multi"]
 	modes["YPbPr"] = ["720p", "1080i", "576p", "480p", "576i", "480i"]
-	modes["DVI"] = ["720p", "1080p", "1080i", "576p", "480p", "576i", "480i"]
-	modes["DVI-PC"] = ["PC"]
+	modes["hdmi"] = ["720p", "1080p", "1080i", "576p", "480p", "576i", "480i"]
+	modes["hdmi-PC"] = ["PC"]
 
 	def getOutputAspect(self):
 		ret = (16,9)
@@ -99,9 +99,9 @@ class VideoHardware:
 
 		self.readAvailableModes()
 
-		if self.modes.has_key("DVI-PC") and not self.getModeList("DVI-PC"):
-			print "remove DVI-PC because of not existing modes"
-			del self.modes["DVI-PC"]
+		if self.modes.has_key("hdmi-PC") and not self.getModeList("hdmi-PC"):
+			print "remove hdmi-PC because of not existing modes"
+			del self.modes["hdmi-PC"]
 
 		self.createConfig()
 		self.readPreferredModes()
@@ -109,7 +109,7 @@ class VideoHardware:
 		portlist = self.getPortList()
 		has1080p50 = False
 		for port in portlist:
-			if port == 'DVI' and HardwareInfo().has_hdmi():
+			if port == 'hdmi' and HardwareInfo().has_hdmi():
 				if "1080p50" in self.modes_available:
 					has1080p50 = True
 
@@ -150,7 +150,7 @@ class VideoHardware:
 		if self.modes_preferred != self.last_modes_preferred:
 			self.last_modes_preferred = self.modes_preferred
 			print "hotplug on dvi"
-			self.on_hotplug("DVI") # must be DVI
+			self.on_hotplug("hdmi") # must be hdmi
 
 	# check if a high-level mode with a given rate is available.
 	def isModeAvailable(self, port, mode, rate):
@@ -210,7 +210,7 @@ class VideoHardware:
 		return True
 
 	def isPortUsed(self, port):
-		if port == "DVI":
+		if port == "hdmi":
 			self.readPreferredModes()
 			return len(self.modes_preferred) != 0
 		else:
@@ -243,9 +243,9 @@ class VideoHardware:
 		portlist = self.getPortList()
 		for port in portlist:
 			descr = port
-			if descr == 'DVI' and has_hdmi:
+			if descr == 'hdmi' and has_hdmi:
 				descr = 'HDMI'
-			elif descr == 'DVI-PC' and has_hdmi:
+			elif descr == 'hdmi-PC' and has_hdmi:
 				descr = 'HDMI-PC'
 			lst.append((port, descr))
 
