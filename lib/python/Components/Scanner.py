@@ -33,6 +33,8 @@ def getType(file):
 
 class Scanner:
 	def __init__(self, name, mimetypes= [], paths_to_scan = [], description = "", openfnc = None):
+		if not mimetypes: mimetypes = []
+		if not paths_to_scan: paths_to_scan = []
 		self.mimetypes = mimetypes
 		self.name = name
 		self.paths_to_scan = paths_to_scan
