@@ -675,7 +675,7 @@ class NimManager:
 		return self.cablesList[config.Nims[nim].scan_provider.index][1]
 
 	def getTerrestrialDescription(self, nim):
-		return self.terrestrialsList[config.Nims[nim].terrestrial.index][0]
+		return self.terrestrialsList[config.Nims[nim].terrestrial.index][1]
 
 	def getTerrestrialFlags(self, nim):
 		return self.terrestrialsList[config.Nims[nim].terrestrial.index][1]
