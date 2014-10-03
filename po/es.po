@@ -4897,7 +4897,7 @@ msgid "Please use the UP and DOWN keys to select your language. Afterwards press
 msgstr "Use las teclas ARRIBA y ABAJO para seleccionar su idioma. Después, pulse el botón OK."
 
 msgid "Please wait"
-msgstr ""
+msgstr "Por favor espera"
 
 #
 #, fuzzy
@@ -7528,7 +7528,7 @@ msgid ""
 "Unattended upgrade in progress\n"
 "Please wait until your receiver reboots\n"
 "This may take a few minutes"
-msgstr ""
+msgstr "Por favor espera"
 
 #
 msgid "Undo install"
@@ -8486,7 +8486,7 @@ msgid ""
 "Your frontprocessor will be upgraded\n"
 "Please wait until your receiver reboots\n"
 "This may take a few minutes"
-msgstr ""
+msgstr "Por favor espera"
 
 #
 msgid ""
