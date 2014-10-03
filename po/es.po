@@ -7072,7 +7072,9 @@ msgstr ""
 msgid "The timer file (timers.xml) is corrupt and could not be loaded."
 msgstr "El fichero de grabaciones (timers.xml) está corrupto y no puede cargarse."
 
-#
+#sfteam
+msgid "Your frontprocessor will be upgraded\nPlease wait until your receiver reboots\nThis may take a few minutes"
+msgstr "Su receptor se actualizará \ nPor favor, espere hasta que su receptor se reinicia \ nEste puede tardar unos minutos"
 #, fuzzy
 msgid "The user interface of your receiver is restarting"
 msgstr "Espere mientras su red está reiniciando..."
@@ -8527,12 +8529,13 @@ msgid ""
 "\n"
 "Please press OK to continue."
 msgstr ""
-
+#sfteam
 msgid "Your receiver is rebooting"
-msgstr ""
+msgstr "Su receptor está reiniciando"
+#sfteam
 
 msgid "Your receiver is shutting down"
-msgstr ""
+msgstr "Su receptor está apagando"
 
 msgid "Your receiver is shutting down. Please stand by..."
 msgstr ""
